@@ -1,0 +1,9 @@
+.steps {
+  @include reset-list;
+  display: flex;
+}
+
+.steps__step {
+  margin-right: 30px;
+}
+

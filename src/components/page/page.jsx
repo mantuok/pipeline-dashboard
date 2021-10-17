@@ -3,10 +3,12 @@ import Dashboard from '../dashboard/dashboard';
 
 const Page = () => {
   return (
-    <div className="page">
-      <h1 className="page__heading">Pipeline Dashboard</h1>
-      <Dashboard />
-    </div>
+    <section className="page">
+      <div className="page__wrapper">
+        <h1 className="page__heading">Pipeline Dashboard</h1>
+        <Dashboard />  
+      </div>
+    </section>
   )
 }
 

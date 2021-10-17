@@ -10,8 +10,8 @@ const Pipeline = (props) => {
   return (
     <div className="dashboard__pipeline pipeline">
       <button className="pipeline__reload">Reload</button>
+      <Jira id={id} />
       <ul className="pipeline__steps steps">
-        <Jira id={id} />
         <BitBucket />
         <BuildPlan />
       </ul>

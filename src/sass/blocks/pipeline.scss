@@ -1,0 +1,24 @@
+.pipeline {
+  display: grid; 
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "reload jira"
+    "steps steps";
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.pipeline__reload {
+  @include reset-button;
+
+  grid-area: reload;
+}
+
+.pipeline__jira {
+  grid-area: jira;
+}
+
+.pipeline__steps {
+  grid-area: steps;
+}

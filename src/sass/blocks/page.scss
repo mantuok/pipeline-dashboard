@@ -4,3 +4,15 @@
   font-weight: 400;
   line-height: 18px;
 }
+
+.page__wrapper {
+  @include container;
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+.page__heading {
+  @include reset-heading;
+  margin-bottom: 20px;
+}
