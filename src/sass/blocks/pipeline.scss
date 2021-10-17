@@ -3,7 +3,7 @@
   grid-template-columns: min-content 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
-    "reload jira"
+    "reload title"
     "steps steps";
   column-gap: 10px;
   row-gap: 10px;
@@ -15,8 +15,8 @@
   grid-area: reload;
 }
 
-.pipeline__jira {
-  grid-area: jira;
+.pipeline__title {
+  grid-area: title;
 }
 
 .pipeline__steps {

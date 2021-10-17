@@ -1,8 +1,12 @@
 import {ActionType} from './action';
 import {mockPipelineItems} from '../mocks/pipeline-items';
+import {StepStatus} from '../const';
 
 const initialState = {
-  pipelineItems: mockPipelineItems
+  pipelineItems: mockPipelineItems,
+  jiraStatus: StepStatus.FAILED,
+  bitBucketStatus: StepStatus.NONE,
+  buildPlanStatus: StepStatus.NONE
 };
 
 const reducer = (state = initialState, action) => {
