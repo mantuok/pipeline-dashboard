@@ -5,9 +5,15 @@ import Jira from '../jira/jira';
 import BitBucket from '../bit-bucket/bit-bucket';
 import BuildPlan from '../build-plan/build-plan';
 import {getRandomResponse} from '../../mocks/random';
-import {jiraSuccessResponse, jiraFailedResponse} from '../../mocks/pipeline-items';
+import {
+  jiraSuccessResponse, 
+  jiraFailedResponse,
+  bitBucketSuccessResponse,
+  bitBucketFailedResponse
+} from '../../mocks/pipeline-items';
 import { 
-  Step 
+  Step,
+  StepStatus
 } from '../../const';
 import Details from '../details/details';
 
@@ -22,11 +28,15 @@ const Pipeline = (props) => {
     if (selectedStep !== Step.NONE) {
       return <Details />
     }
-  }
+  };
 
   const reloadClickHandler = () => {
-    const response = getRandomResponse(jiraSuccessResponse, jiraFailedResponse)
-    dispatch(ActionCreator.loadJira(response))
+    const jiraResponse = getRandomResponse(jiraSuccessResponse, jiraFailedResponse);
+    const bitBucketResponse = getRandomResponse(bitBucketSuccessResponse, bitBucketFailedResponse)
+    dispatch(ActionCreator.loadJira(jiraResponse));
+    if (jiraResponse.status === StepStatus.SUCESSS) {
+      dispatch(ActionCreator.loadBitBucket(bitBucketResponse))
+    }
   };
 
   return (

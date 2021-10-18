@@ -9,6 +9,7 @@ const initialState = {
   bitBucketStatus: StepStatus.NONE,
   buildPlanStatus: StepStatus.NONE,
   jiraData: {},
+  bitBucketData: {}
 };
 
 const reducer = (state = initialState, action) => {
@@ -19,6 +20,12 @@ const reducer = (state = initialState, action) => {
         jiraStatus: action.payload.status,
         jiraData: action.payload.data
       };
+    case ActionType.LOAD_BIT_BUCKET:
+      return {
+        ...state,
+        bitBucketStatus: action.payload.status,
+        bitBucketData: action.payload.data
+      }; 
     case ActionType.SELECT_STEP: 
       return {
         ...state,

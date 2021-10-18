@@ -3,6 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {ActionCreator} from '../../store/action';
 import {Step} from '../../const';
 import JiraDetails from '../jira-details/jira-details';
+import BitBucketDetails from '../bit-bucket-details/bit-bucket-details';
 
 const Details = () => {
   const selectedStep = useSelector((state) => state.selectedStep);
@@ -11,7 +12,9 @@ const Details = () => {
   const renderStepDetails = () => {
     switch (selectedStep) {
       case Step.JIRA: 
-        return <JiraDetails />
+        return <JiraDetails />;
+      case Step.BIT_BUCKET:
+        return <BitBucketDetails />
     }
   };
 
