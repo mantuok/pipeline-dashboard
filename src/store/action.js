@@ -1,10 +1,15 @@
 export const ActionType = {
-  LOAD_PIPELINE_ITEMS: 'pipelineItems/loadPipelineItems',
+  SELECT_STEP: 'pipeline/selectStep',
+  LOAD_JIRA: 'pipeline/loadJira',
 };
 
 export const ActionCreator = {
-  loadPipelineItems: (pipelineItems) => ({
-    type: ActionType.LOAD_PIPELINE_ITEMS,
-    payload: pipelineItems
+  loadJira: (data) => ({
+    type: ActionType.LOAD_JIRA,
+    payload: data
+  }),
+  selectStep: (selectedStep) => ({
+    type: ActionType.SELECT_STEP,
+    payload: selectedStep
   })
 }

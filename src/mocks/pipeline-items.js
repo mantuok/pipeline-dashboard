@@ -7,3 +7,17 @@ export const mockPipelineItems = [
   }
 ];
 
+export const jiraSuccessResponse = {
+  status: `SUCCESS`,
+  data: {
+    link: `https://123`,
+    description: `New Feature`
+  }
+};
+
+export const jiraFailedResponse = {
+  status: `FAILED`,
+  data: {
+    
+  }
+};
