@@ -17,8 +17,8 @@ const reducer = (state = initialState, action) => {
     case ActionType.LOAD_JIRA:
       return {
         ...state,
-        jiraStatus: action.payload.status,
-        jiraData: action.payload.data
+        jiraStatus: action.payload.nodeStatus,
+        jiraData: action.payload
       };
     case ActionType.LOAD_BIT_BUCKET:
       return {

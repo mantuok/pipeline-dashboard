@@ -32,6 +32,7 @@ const Pipeline = (props) => {
 
   const reloadClickHandler = () => {
     const jiraResponse = getRandomResponse(jiraSuccessResponse, jiraFailedResponse);
+    console.log(jiraResponse)
     const bitBucketResponse = getRandomResponse(bitBucketSuccessResponse, bitBucketFailedResponse)
     dispatch(ActionCreator.loadJira(jiraResponse));
     if (jiraResponse.status === StepStatus.SUCESSS) {

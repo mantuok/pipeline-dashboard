@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {ActionCreator} from '../../store/action';
 import classnames from 'classnames';
@@ -15,11 +15,13 @@ const Jira = (props) => {
   const {id} = props;
   const dispatch = useDispatch();
   const currentJiraStatus = useSelector((state) => state.jiraStatus);
+  const lastUpdated = useSelector((state => state.jiraData.nodeUpdated));
+  const number = useSelector((state => state.jiraData.number));
 
-  const stepClass = classnames(
-    `steps__step steps__step--jira step`,
-    {"step--success": isStepSuccess(currentJiraStatus),
-    "step--failed": isStepFailed(currentJiraStatus)}
+  const stepNameClass = classnames(
+    `step__name`,
+    {"step__name--success": isStepSuccess(currentJiraStatus),
+    "step__ame--failed": isStepFailed(currentJiraStatus)}
   );
 
   const stepClickHandler = () => {
@@ -28,10 +30,13 @@ const Jira = (props) => {
 
   return (
     <li 
-      className={stepClass}
+      className="steps__step steps__step--jira step"
       onClick={stepClickHandler}
-    >Jira item {id}</li>
+    >
+      <span className="step__last-update">{lastUpdated}</span>
+      <span className={stepNameClass}>Jira item {number}</span>
+    </li>
   )
 };
 
-export default Jira;
+export default Jira; 

@@ -1,4 +1,11 @@
 .step {
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+}
+
+.step__name {
   padding-top: 5px;
   padding-right: 8px;
   padding-bottom: 5px;
@@ -6,8 +13,6 @@
 
   border: 3px solid grey;
   border-radius: 5px;
-
-  cursor: pointer;
 
   &--success {
     border-color: green;
