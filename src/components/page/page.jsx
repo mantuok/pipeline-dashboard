@@ -1,13 +1,15 @@
 import React from 'react';
 import Dashboard from '../dashboard/dashboard';
+import Header from '../header/header';
 
 const Page = () => {
   return (
     <section className="page">
-      <div className="page__wrapper">
+      <Header />
+      <main className="page__wrapper">
         <h1 className="page__heading">Pipeline Dashboard</h1>
         <Dashboard />  
-      </div>
+      </main>
     </section>
   )
 }

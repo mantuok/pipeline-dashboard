@@ -3,8 +3,6 @@ import {useSelector} from 'react-redux';
 
 const JiraDetails = () => {
   const jiraData = useSelector((state) => state.jiraData)
-  const link = jiraData.link;
-  const description = jiraData.description;
 
   const number = jiraData.number;
   const title = jiraData.title;

@@ -2,9 +2,14 @@
   --font-basic: #000000;
   --font-contrast: #ffffff;
 
-  --button-basic: #ffc107;
-  --button-active: #28a745;
-  --button-basic-hover: #d39e00;
+  --button-basic: #f8ce46;
+  --button-active: #f08c34;
+  --button-hover: #fae49b;
+
+  --border-basic: #b8b8b0;
+  --border-success: #86b88b;
+  --border-failed: #bf9797;
+
 
   --users-basic: #c4e1ff;
   --users-hover: #005cbf;
@@ -13,8 +18,8 @@
   --navigation-basic: #17a2b8;
   --navigation-hover: #138496;
 
-  --background-basic: #e6f9fc;
-  --background-light-contrast: #ffffff;
+  --background-basic: #ffffff;
+  --background-contrast: #f8ce46;;
   --background-dark-contrast: #17a2b8;
 
   --transparent: rgba(0, 0, 0, 0.5);

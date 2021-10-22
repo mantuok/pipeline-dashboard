@@ -35,7 +35,7 @@ const Jira = (props) => {
       onClick={stepClickHandler}
     >
       <span className="step__last-update">{lastUpdatedHumanFormat}</span>
-      <span className={stepNameClass}>Jira item {number}</span>
+      <span className={stepNameClass}>Jira</span>
     </li>
   )
 };

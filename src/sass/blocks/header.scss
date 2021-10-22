@@ -1,0 +1,17 @@
+.header {
+  @include container;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  background-color: var(--background-contrast);
+}
+
+.header__logo {
+  margin-right: 20px;
+}

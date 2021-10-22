@@ -16,11 +16,15 @@ import {
   StepStatus
 } from '../../const';
 import Details from '../details/details';
+import Search from '../search/search';
 
 const Pipeline = (props) => {
   const {pipeline} = props;
   const {id} = pipeline;
-  const selectedStep = useSelector((state) => state.selectedStep)
+  const selectedStep = useSelector((state) => state.selectedStep);
+  const jiraNumber = useSelector((state) => state.jiraData.number);
+  const jiraTitle = useSelector((state) => state.jiraData.title);
+
 
   const dispatch = useDispatch();
 
@@ -46,7 +50,8 @@ const Pipeline = (props) => {
         className="pipeline__reload"
         onClick={reloadClickHandler}
       >Reload</button>
-      <div className="pipeline__title">Jira item {id}</div>
+      <Search />
+      <div className="pipeline__title">{jiraNumber} {jiraTitle}</div>
       <ul className="pipeline__steps steps">
         <Jira id={id} />
         <BitBucket />

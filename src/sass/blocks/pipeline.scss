@@ -1,13 +1,15 @@
 .pipeline {
   display: grid; 
-  grid-template-columns: min-content 1fr;
+  grid-template-columns: min-content max-content 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
-    "reload title"
-    "steps steps"
-    "details details";
+    "reload search title"
+    "steps steps steps"
+    "details details details";
   column-gap: 10px;
   row-gap: 10px;
+
+  align-items: center;
 }
 
 .pipeline__reload {
@@ -18,6 +20,10 @@
 
 .pipeline__title {
   grid-area: title;
+}
+
+.pipeline__search {
+  grid-area: search;
 }
 
 .pipeline__steps {
